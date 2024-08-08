@@ -1,0 +1,106 @@
+.body{
+    background-color: black;
+}
+
+
+.titulo{
+    font-family: "Permanent Marker";
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    background-color: rgb(22, 22, 22);
+    border-color: rgb(255, 255, 255);
+    width: 300px;
+    border-radius: 5px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 50px;
+    border-style: solid;
+    border-spacing: 10px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.divs{
+    border-style: solid;
+    border-width: auto;
+    text-align: center;
+    align-content: center;
+    border-color: rgb(255, 255, 255);
+}
+
+.linea1{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: auto;
+}
+
+.linea2{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: auto;
+}
+
+.botones{
+    display: flex;
+    width: 280px;
+    margin: auto;
+}
+
+.botonReiniciar{
+    color: rgb(255, 255, 255);
+    background-color: rgb(247, 9, 40);
+    font-family: Verdana;
+    border-radius: 5px;
+    width: 100px;
+    height: 28px;
+    margin: auto;
+
+}
+
+.botonGuardar{
+    color: rgb(255, 255, 255);
+    background-color: orangered;
+    font-family: Verdana;
+    border-radius: 5px;
+    width: 100px;
+    height: 28px;
+    margin: auto;
+}
+
+.turnoX{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    border-radius: 10px;
+}
+
+.turnoO{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    border-radius: 10px;
+}
+
+.textos{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
