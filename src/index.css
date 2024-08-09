@@ -6,7 +6,7 @@
 .titulo{
     font-family: "Permanent Marker";
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: 300%;
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -79,6 +79,8 @@
     margin: auto;
     align-items: center;
     color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: bolder;
     height: 30px;
     background-color: rgb(255, 255, 255);
     width: 150px;
@@ -93,6 +95,8 @@
     align-items: center;
     color: rgb(0, 0, 0);
     height: 30px;
+    font-size: x-large;
+    font-weight: bolder;
     background-color: rgb(255, 255, 255);
     width: 150px;
     border-radius: 10px;
@@ -110,6 +114,8 @@
     border-radius: 10px;
     font-family: Cambria;
     text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
 }
 
 .textos{

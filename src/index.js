@@ -9,6 +9,7 @@ const empate = document.getElementById("empate")
 
 variableGane = "0"
 
+
 turnoX.innerText = ""
 turnoO.innerText = ""
 empate.innerText = ""
@@ -18,32 +19,38 @@ let mensajeO = ""
 
 let limpiar = "0"
 
+let equis = localStorage.getItem("ganadorX")||[]
+let circulo = localStorage.getItem("ganadorO")||[]
+
 
 function validarGane() {
 
 gane = "0"
+
 
 ///////////////////////////////validacion ganar X filas/////////////////////////////////////////////
 
     if (divs[0].textContent === "X" && divs[1].textContent === "X" && divs[2].textContent === "X") {
         gane = "X"   
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                                                                   
-                  
+            divs[index].style.pointerEvents = "none"
+        equis++                                                                  
                 }
+
+                
                             
     if (divs[3].textContent === "X" && divs[4].textContent === "X" && divs[5].textContent === "X") {
         gane = "X"   
         for (let index = 0; index < divs.length; index++) 
             divs[index].style.pointerEvents = "none"   
-
+        equis++ 
                 }
                                                     
     if (divs[6].textContent === "X" && divs[7].textContent === "X" && divs[8].textContent === "X") {
         gane = "X"  
         for (let index = 0; index < divs.length; index++) 
             divs[index].style.pointerEvents = "none"   
-
+        equis++ 
                 }
                             
                                 
@@ -52,19 +59,22 @@ gane = "0"
     if (divs[0].textContent === "X" && divs[3].textContent === "X" && divs[6].textContent === "X") {
         gane = "X" 
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                              
+            divs[index].style.pointerEvents = "none"  
+        equis++ 
                     }
 
     if (divs[1].textContent === "X" && divs[4].textContent === "X" && divs[7].textContent === "X") {
         gane = "X" 
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                         
+            divs[index].style.pointerEvents = "none"       
+        equis++                   
                     }
                 
     if (divs[2].textContent === "X" && divs[5].textContent === "X" && divs[8].textContent === "X") {
         gane = "X"     
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                                
+            divs[index].style.pointerEvents = "none"  
+        equis++                               
                     }
 
 ///////////////////////////////validacion ganar X diagonales/////////////////////////////////////////////
@@ -72,13 +82,15 @@ gane = "0"
     if (divs[0].textContent === "X" && divs[4].textContent === "X" && divs[8].textContent === "X") {
         gane = "X"  
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                             
+            divs[index].style.pointerEvents = "none"    
+        equis++                          
                 }
 
     if (divs[2].textContent === "X" && divs[4].textContent === "X" && divs[6].textContent === "X") {
         gane = "X" 
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"    
+            divs[index].style.pointerEvents = "none"   
+        equis++  
                 }
 
 ///////////////////////////////validacion ganar O filas/////////////////////////////////////////////
@@ -86,44 +98,66 @@ gane = "0"
     if (divs[0].textContent === "O" && divs[1].textContent === "O" && divs[2].textContent === "O") {
         gane = "O"   
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"                              
+            divs[index].style.pointerEvents = "none"                         
+        circulo++
                 }
 
     if (divs[3].textContent === "O" && divs[4].textContent === "O" && divs[5].textContent === "O") {
         gane = "O"
         for (let index = 0; index < divs.length; index++) 
             divs[index].style.pointerEvents = "none"   
+        circulo++
                 }
     
     if (divs[6].textContent === "O" && divs[7].textContent === "O" && divs[8].textContent === "O") {
         gane = "O"
         for (let index = 0; index < divs.length; index++) 
-            divs[index].style.pointerEvents = "none"   
+            divs[index].style.pointerEvents = "none"  
+        circulo++
                 }
 
 ///////////////////////////////validacion ganar O columnas/////////////////////////////////////////////
 
     if (divs[0].textContent === "O" && divs[3].textContent === "O" && divs[6].textContent === "O") {
         gane = "O" 
+        for (let index = 0; index < divs.length; index++) 
+            divs[index].style.pointerEvents = "none"  
+        circulo++
                 }
 
     if (divs[1].textContent === "O" && divs[4].textContent === "O" && divs[7].textContent === "O") {
-        gane = "O"                                                                  
+        gane = "O"   
+        for (let index = 0; index < divs.length; index++) 
+            divs[index].style.pointerEvents = "none"    
+        circulo++
                 }
                 
     if (divs[2].textContent === "O" && divs[5].textContent === "O" && divs[8].textContent === "O") {
-        gane = "O"                                                                                  
+        gane = "O" 
+        for (let index = 0; index < divs.length; index++) 
+            divs[index].style.pointerEvents = "none"  
+        circulo++                                                                                
                 }
 
 ///////////////////////////////validacion ganar O diagonales/////////////////////////////////////////////
 
     if (divs[0].textContent === "O" && divs[4].textContent === "O" && divs[8].textContent === "O") {
-        gane = "O"                                                                               
+        gane = "O"   
+        for (let index = 0; index < divs.length; index++) 
+            divs[index].style.pointerEvents = "none"  
+        circulo++
                 }
 
     if (divs[2].textContent === "O" && divs[4].textContent === "O" && divs[6].textContent === "O") {
-        gane = "O"                                                                                                   
+        gane = "O"    
+        for (let index = 0; index < divs.length; index++) 
+            divs[index].style.pointerEvents = "none"   
+        circulo++
                 }
+
+                localStorage.setItem("ganadorX", (equis))
+                localStorage.setItem("ganadorO", (circulo))
+                
 
     return gane
 }
@@ -208,7 +242,7 @@ for (let index = 0; index < lista.length; index++) {
 
             limpiar = "1"
         }
- 
+
 
 /////////////////////////boton reiniciar - recarga la pagina///////////////////////////////////////
 
@@ -225,19 +259,7 @@ for (let index = 0; index < lista.length; index++) {
             empate.innerText = "EMPATE"
             console.log("empate");  
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
 
      
         }
